@@ -1,0 +1,91 @@
+*,*::after,*::before
+
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+   box-sizing: border-box;
+}
+.wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    background: #5C258D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4389A2, #5C258D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4389A2, #5C258D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: grid;
+    place-items: center;
+
+}
+
+.gameInfo{
+    padding: .5rem 1rem;
+    color: white;
+    position: absolute;
+    border-radius: 6px;
+   
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.ticTacToe
+{
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgb(255, 255, 255, 0.15);
+    border-radius: 1rem;
+   
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr );
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;;
+}
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+
+}
+.borderRight{
+    border-right: 1px solid white;
+}
+.borderBottom{
+    border-bottom: 1px solid white;
+}
+ .newGameBtn
+ {
+    background-color: rgb(255, 255, 255, 0.15);
+    color: wheat;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    scale: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+ }
+ .win{
+    background-color: rgb(1, 133, 1);
+    
+ }
+
+ .newGameBtn.active{
+    scale: 1;
+    opacity: 1;
+ }

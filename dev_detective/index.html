@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300&family=Roboto:wght@100;300;400;500;700&family=Rubik:wght@300;400;500&family=Saira+Condensed:wght@200&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Dev Detective</title>
+    <link id="stylesheet" rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!-- title of dev detective-->
+            <div class="title_container">
+                <p id="title">Dev Detective</p>
+                <input type="checkbox" id="darkmode-toggle" />
+                <label for="darkmode-toggle" ><i class="fa-solid fa-sun"  id="sum"></i>
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                </label>
+                    
+            </div>
+            <!-- search for username section-->
+            <div class="search_username">
+                <img src="./assets/search-svgrepo-com.svg" width="25px" alt="">
+                <input type="text" class="username" placeholder="Enter a github username...">
+                <button type="submit" class="search"> Search</button>
+            </div>
+            <!-- information container contains information of github account -->
+            <div class="loading_container"><img src="./assets/tenor.gif" alt="" width="150px"></div>
+            <div class="information_container ">
+                <!-- left part contains image -->
+                <div class="leftPart">
+                    <div class="profile"> </div>
+                </div>
+                <!-- right part contains information -->
+                <div class="rightPart">
+
+                    <div class="heading">
+                        <p id="name">abc</p>
+                        <div id="joindeDate">abc</div>
+                    </div>
+                    <div class="githubLink"><a href="" class="githubLink"></a></div>
+                    <div class="description"><p> 
+                     </p></div>
+                     <div id="numbers">
+                        <div class=" repos">
+                            <p >Repos</p>
+                            <p class="num" id="repos"></p>
+                        </div>
+                        <div class=" followers">
+                            <p>Followers</p>
+                            <p class="num" id="followers"></p>
+                        </div>
+                        <div class="following">
+                            <p>Following</p>
+                            <p class="num" id="following"></p>
+                        </div>
+
+                     </div>
+                     <div id="furtherInformation">
+                        <div class="info location">
+                            
+                             <img src="./assets/location-pin-svgrepo-com.svg"  >
+                             <p class="location_text"></p>
+                        </div>
+                        <div class="info twitter">
+                            <img src="./assets/twitter-154-svgrepo-com.svg"  >
+                            <p class="twitter_text"></p>
+                        </div>
+                        <div class="info company">
+                             <img src="./assets/company-svgrepo-com.svg "  >
+                          <p class="company_text"></p>
+                        </div>
+                        <div class=" info htmlUrl">
+                             <img src="./assets/link-svgrepo-com.svg"  >
+                            <a href="" class="link_text"></a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/e139dabd00.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

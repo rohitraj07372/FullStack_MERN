@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="handelCheckboxChange()">
+    <div class="wrapper">
+        <div class="upper_container">
+        <div class="container">
+            <div class="title"><h1 class="pass">Password Generator</h1></div>
+            <div class="display_container">
+                <input type="text" readonly placeholder="password" data-password-display name="" >
+                <button data_cpy class="cpy_btn"><span class="toolTip" data-copied-msg></span>
+                    <i class="fa-solid fa-clone"></i>
+                </button>
+            </div>
+            <div class="second_part">
+            <div class="input-container">
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p change-length class="pass_length">0</p>
+                </div>
+            </div> 
+
+           <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider></ 
+            <div class="check-section">
+              
+                <div class="check">
+                    <input type="checkbox" id="upperCase" checked>
+                    <label for="upperCase">Include UpperCase Letters</label>  
+                </div>
+               
+                 <div class="check">
+                    <input type="checkbox" id="LowerCase">
+                    <label for="upperCase">Include LowerCase Letters</label>
+    
+                 </div>
+              
+              <div class="check">
+                <input type="checkbox" id="number">
+                <label for="upperCase">Include Numbers</label>
+              </div>
+              
+                
+              <div class="check">
+                <input type="checkbox" id="symbol">
+                <label for="upperCase">Include Symbols</label>
+              </div>
+               
+             
+            <div class="strength-section">
+                <p>strength</p>
+                <div strength-indicator class="indicator"></div>
+            </div>
+            <div class="gen_button"> <button class="generateButton" >GENERATE PASSWORD</button></div>
+           </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/e139dabd00.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

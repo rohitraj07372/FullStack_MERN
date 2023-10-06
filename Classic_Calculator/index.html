@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <!--display area-->
+            <div class="display_area">
+                <div class="display">
+                    <input type="text" class="upper" readonly name="upper">
+                    <input type="text" class="lower" name="lower" readonly >
+                </div>
+                <div class="img"><img image src="./asset/sleep.png"  alt=""></div>
+               
+            </div>
+            <div class="check_keys">
+                    <!--check button-->
+                    <button class="check">
+                        CHECK
+                        <img src="" alt="arrow icon">
+                    </button>
+                    
+                 
+                    <!--correct button-->
+                    <button class="correct">
+                        CORRECT
+                        <img src="" alt="cross icon">
+                    </button>
+                    <button class=" arrow left_arrow"><</button>
+                    <button class=" arrow right_arrow">></button>
+                    
+                  <!--solar display-->  
+                <div class="solar_display off">OFF</div>
+                
+            </div>
+            <!--leftmost keys-->
+            <div class="function_keys">
+                <div class="leftmost_keys">
+                    <button type="button" class="left" id="gt"><p>GT</p></button>
+                    <button type="button" class="left" id="mu"><p>MU</p></button>
+                    <button type="button" class="left " id="plus_minus"><p>+/-</p></button>
+                    <button type="button" class="left  " id="root"><p>√X</p></button>
+                    <button type="button" class="left " id="ce"><p>CE</p></button>
+                </div>
+                <!--middle keys-->
+                <div class="middle_keys">
+                    <button type="button" class=" middle seven" value="7">7</button>
+                    <button type="button" class=" middle eight" value="8">8</button>
+                    <button type="button" class=" middle nine" value="9">9</button>
+                    <button type="button" class=" middle four" value="4">4</button>
+                    <button type="button" class=" middle five" value="5">5</button>
+                    <button type="button" class=" middle six" value="6">6</button>
+                    <button type="button" class=" middle one" value="1">1</button>
+                    <button type="button" class=" middle two" value="2">2</button>
+                    <button type="button" class=" middle three" value="3">3</button>
+                    <button type="button" class=" middle zero" value="0">0</button>
+                    <button type="button" class=" middle doubleZero" value="00">00</button>
+                    <button type="button" class=" middle dot" value=".">.</button>
+                </div>
+                <!--rightmost keys-->
+                 <div class="rightmost_keys">
+                    <button type="button" value="/" class=" right divide">÷ </button>
+                    <button type="button"  class=" right auto_reply">
+                         <div class="auto_dot_off"></div>
+                         AUTO REPLAY </button>
+                    <button type="button"           class="on_off">ON<br>OFF </button>
+                    <button type="button"  value="*" class=" right multiply">× </button>
+                    <button type="button"  value="%" class=" right modulo">% </button>
+                    <button type="button"         class=" backspace" style="background-color: white;"> <img src="./asset/backspace-arrow.png" alt="" width="25rem"> </button>
+                    <button type="button"  value="+" class=" right plus">+ </button>
+                    <button type="button"  value="-" class=" right minus">- </button>
+                    <button type="button"  value="(" class=" right left_bracket">( </button>
+                     
+                    <button type="button" class=" equal"> = </button>
+                    <button type="button" value=")" class=" right right_bracket">) </button>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

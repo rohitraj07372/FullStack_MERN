@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+font-family: 'Roboto', sans-serif;
+ 
+}
+/* **************** light mode **********************/
+.wrapper{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A2438;
+
+}
+/* container styling */
+
+.container{
+
+width: 800px;
+max-width: 1200px;
+padding: .5rem;
+
+}
+
+.loading_container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translateX(-50%);
+    opacity: 0;
+    scale: 0;
+
+}
+
+/* ******  title container ******* */
+
+.title_container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.title_container #title{
+    font-weight: 700;
+    font-size: large;
+    color: #DBD8E3;
+}
+
+
+
+
+/* ***************   dark and light mode button ********************** */
+
+label {
+    width:90px;
+    height:30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+  }
+  label:after {
+    content: "";
+    width:25px;
+    height: 25px;
+    position: absolute;
+    top:.2rem;
+    left:.2rem;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px #1f1929;
+  }
+#darkmode-toggle {
+     
+   appearance: none;
+  }
+#darkmode-toggle:checked + label {
+    background: #241e30;
+  }
+  input:checked + label:after {
+    left:86px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+  label, label:after {
+    transition: 0.3s
+  }
+  label:active:after{ 
+    width: 40px; 
+    
+  }
+
+
+  label #sum{
+    position: absolute;
+    top:.4rem;
+    left:.5rem;
+    z-index: 10;
+    color: rgb(250, 212, 0);
+  }
+
+  label #moon{
+    position: absolute;
+    top:.4rem;
+    right:.6rem;
+    z-index: 10;
+    color: rgb(207, 206, 206);
+  }
+
+/*  search section  */
+
+.search_username
+{
+    width: 100%;
+    padding: .3rem;
+    height: 3rem;
+    display: flex;
+    gap: .2rem;
+   background-color:#352F44;
+   border-radius: .5rem;
+   box-shadow: 2px 2px 10px #352F44;
+   margin-top: 1rem;
+   
+   position: relative;
+   align-items: center;
+}
+.search_username input{
+    border: none;
+    width: 100%;
+    background-color: #352F44;
+    color: #DBD8E3;
+}
+.search_username input:focus{
+    outline: none;
+}
+.username::placeholder{
+    color: #DBD8E3;
+     
+}
+
+ 
+ 
+.search{
+    background-color: rgb(17, 92, 255);
+    border: none;
+    color:  #DBD8E3;
+    font-weight: 500;
+    padding: .5rem .7rem;
+    border-radius: .2rem;
+    position: absolute;
+    right: .5rem;
+     
+
+}
+.rightPart{
+    width: 100%;
+   
+}
+.search:hover{
+    background-color:rgb(60, 122, 255) ;
+    cursor: pointer;
+ 
+}
+
+/* information container */
+.information_container{
+    background-color: #352F44;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px #352F44;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0;
+    scale: 0;
+    transition: all .2s ease-in;
+}
+.active{
+    opacity: 1;
+    scale: 1;
+}
+
+.profile{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-image: url("./assets/images.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+}
+ 
+/*  heading section name and joined date */
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+
+}
+#name{
+    font-weight: 900;
+    font-size: x-large;
+    color:  #DBD8E3;
+}
+#joindeDate
+{
+    color:  #DBD8E3;
+}
+.githubLink{
+    color: rgb(149, 189, 248);
+    font-weight: 400;
+    text-decoration: underline;
+}
+.description{
+    margin: 1rem 0;
+    color:  #DBD8E3;
+}
+
+/* numbers / following / followers / and repos  */
+#numbers
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #5C5470;
+    padding: 1rem;
+    color:  #DBD8E3;
+    border-radius: .2rem;
+}
+.num{
+    margin-top: .3rem;
+    font-size: x-large;
+    font-weight: 700;
+    color:  #DBD8E3;
+}
+/*  further information section  */
+#furtherInformation{
+    margin-top: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+}
+.info{
+    display: flex;
+     gap: .4rem;
+}
+#furtherInformation img{
+    width: 1.1rem;
+    fill:  #DBD8E3;
+    filter: hue-rotate(90deg);
+}
+
+ .location_text, .twitter_text, .company_text, .link_text{
+    color: #DBD8E3;
+ }
+

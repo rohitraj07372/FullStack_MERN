@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+   width: 100vw;
+   height: 100vh;
+   background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.container
+{
+    width: 600px;
+    min-width: 600px;
+    background-color: rgb(255, 255, 255,.20);
+    border-radius: .4rem;
+    padding: .5rem;
+   
+}
+/* display area css */
+.display_area
+{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: .2rem;
+    padding: .5rem;
+    display: flex;
+    gap: .5rem;
+   
+    
+    position: relative;
+}
+.display_area .display{
+    width: 80%;
+    border: 2px solid gray;
+    background-color:rgba(255, 255, 255, 0.2) ;
+    height: 100%;
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+.display input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    font-weight: bolder;
+    font-size: larger;
+    padding:0 .2rem;
+    color: #2c3e50;
+}
+.display input.upper{
+    font-size: x-large;
+}
+.display input.lower{
+    color: #727171;
+}
+ 
+.display input:focus, textarea:focus{
+    outline: none;
+}
+.display_area .img
+{
+    position: relative;
+    width: 20%;
+    border-radius: .2rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+     
+}
+.display_area .img img{
+    position: absolute;
+   width: 110%;
+   left: 50%;
+   transform: translateX(-20%);
+    
+     
+}
+.check_keys
+{
+    width: 100%;
+    height: 10%;
+   
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    margin-top: .3rem;
+    display: flex;
+    gap: 1rem;
+    padding: .3rem;
+    position: relative;
+
+}
+
+.check, .correct{
+    background-color: #008cdd;
+    color: white;
+    padding: .2rem;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    font-weight: bold;
+    font-size: xx-small;
+    border-radius: .2rem;
+    border-top: 2px solid #8ad0ff;
+    border-left:2px solid #8ad0ff;
+    border-bottom:2px solid #0d5585;
+    border-right:2px solid #0d5585;
+    
+}
+.check:hover, .correct:hover, .arrow:hover
+{
+    background-color: #1aa5f5
+}
+.check:active, .correct:active, .arrow:active
+{
+    border-top: 2px solid #0d5585;
+    border-left:2px solid #0d5585;
+    border-bottom:2px solid #8ad0ff;
+    border-right: 2px solid #8ad0ff;
+}
+ 
+
+/*arrow button */
+.arrow{
+    border-top: 2px solid #8ad0ff;
+    border-left:2px solid #8ad0ff;
+    border-bottom:2px solid #0d5585;
+    border-right:2px solid #0d5585;
+    padding:0 1rem;
+    background-color: #008cdd;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+ 
+.off
+{
+    background-color: #ff0000;
+    border-radius: 10px;
+    color: wheat;
+    text-align: center;
+    font-weight: bold;
+    padding: .1rem;
+    position: absolute;
+    right: 10%;
+    width: 100px;
+    height: 20px;
+
+}
+.on{
+    background-color: #00a808;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px #00ff0d, inset 3px 3px 10px #00ff0d;
+    
+    color: wheat;
+    text-align: center;
+    font-weight: bold;
+    padding: .1rem;
+    position: absolute;
+    right: 10%;
+    width: 100px;
+    height: 20px;
+}
+ 
+.function_keys
+{
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    width: 100%;
+    margin-top: .3rem;
+    display: flex;
+    gap: .3rem;
+}
+.leftmost_keys
+{
+    width: 12%;
+    
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto auto auto auto 45px;
+    padding: .2rem;
+    grid-row-gap:.8rem ;
+    display: grid;
+    
+
+}
+
+
+.left{
+   background-color: white;
+   padding:.8rem 0;
+   font-weight: bolder;
+   border-radius: .2rem;
+    border-top: 2px solid #aaaaaa;
+    border-left:2px solid #aaaaaa;
+    border-bottom:2px solid #787879;
+    border-right:2px solid #787879;
+   position: relative;
+}
+.left p{
+    position: absolute;
+    top: .1rem;
+    left: .2rem;
+    
+}
+.left:hover
+{
+     
+    background-color: rgb(234, 247, 178);
+}
+.left:active{
+    border-bottom: 2px solid #aaaaaa;
+    border-right:2px solid #aaaaaa;
+    border-left:2px solid #787879;
+    border-top:2px solid #787879;
+}
+.middle_keys{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+     grid-gap: .5rem;
+    padding: .2rem;
+    border-right: 1px solid rgb(216, 216, 216);
+    border-left: 1px solid rgb(238, 238, 238);
+     
+    
+}
+.middle{
+    font-weight: bolder;
+    font-size: larger;
+    background-color: #415870;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: white;
+    place-self: center;
+    
+
+}
+.middle:hover
+{
+    background-color: #526f8d; 
+}
+.rightmost_keys
+{
+    width: 38%;
+    padding: .2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-row-gap: .1rem;
+   
+   
+   
+     
+}
+.right
+{
+    
+    position: relative;
+    font-size: 400;
+    font-weight: bolder;
+    background-color: #415870;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: white;
+     
+ 
+    
+}
+.auto_reply{
+    position: relative;
+}
+  .auto_dot_off
+{
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    z-index: 1;
+     
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 2px 2px 6px red;
+}
+.auto_dot_on{
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    z-index: 1;
+     
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(68, 255, 68);
+    box-shadow: 2px 2px 6px rgb(2, 255, 2);
+}
+
+/* auto dot active color green */
+
+.backspace{
+    
+    font-size: 400;
+    font-weight: bolder;
+    
+    width: 3.5rem;
+    height: 3.5rem;
+    color: white;
+     
+}
+.equal{
+     
+    font-size: 400;
+    font-weight: bolder;
+    background-color: #415870;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: white;
+      
+}
+.on_off{
+    position: relative;
+    font-size: 400;
+    font-weight: bolder;
+    background-color: #415870;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: white;
+      
+}
+.auto_reply{
+    font-weight: bold;
+    font-size: x-small;
+}
+.right:hover
+{
+    background-color: #526f8d;  
+}
+ 
+ 
+.on_off
+{
+    background-color: rgb(0, 132, 255);
+    color: white;
+}
+.on_off:hover
+{
+    background-color: rgb(55, 155, 248);
+}
+.divide, .multiply, .modulo, .plus, .minus, .equal, .multiply{
+    font-size: larger;
+    font-weight: bolder;
+}
+.plus
+{
+    height: inherit;
+    
+    grid-row-end: span 5;
+}
+ 
