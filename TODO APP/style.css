@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main{
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+#inputText{
+    border: none;
+    outline:none;
+    background: none;
+    padding-left: 15px;
+    font-size: large;
+    
+}
+
+#btn{
+    
+   appearance: none;
+   border: none;
+   background-color:rgb(50, 228, 50);
+   padding: 10px 18px;
+   font-size: large;
+   font-weight: bolder;
+   color: white;
+   border-radius:20px;
+   cursor: pointer;
+   
+   
+    
+   
+}
+
+#btn:hover{
+    background-color:rgb(14, 117, 0);
+}
+#btn:active{
+    background-color:rgb(29, 182, 8);
+}
+.input{
+   background-color: rgba(215, 216, 215, 0.7);
+   border-radius: 20px;
+}
+
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 3px 10px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.lists{
+    margin-top: 10px;
+}
+
+ul li::before{
+    content:'';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    background-image: url(https://smartly.co.nz/content/dam/smartly/images/icons/conceptual-icons/check%20circle-not%20selected.png);
+    background-size: cover;
+    height: 15px;
+    width: 15px;
+    background-position: center;
+    
+
+}
+
+
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+
+
+}
+
+ul li.checked::before{
+    background-image: url(https://th.bing.com/th/id/OIP.0BjWtvPYiYkXLFFXftaf-QHaHa?w=217&h=217&c=7&r=0&o=5&pid=1.7);
+    
+
+}
+ul li{
+    position:relative;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    height: 15px;
+    width: 15px;
+    font-size: larger;
+    color:red;
+    font-weight: bolder;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ul li span:hover{
+  background-color: rgb(255, 110, 195,0.6);
+}
+
